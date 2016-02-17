@@ -110,7 +110,7 @@ if __name__ == '__main__':
 				jsont["rez"] = rez[4]
 				try:
 					with open(logfile, 'a') as lf:
-						lf.write(json.dumps(jsont, ensure_ascii=True))
+						lf.write("%s\n" % json.dumps(jsont, ensure_ascii=True))
 				except Exception as e:
 					logging.basicConfig(format='%(levelname)s:%(message)s', level=logging.DEBUG)
                                 	logging.info('%s\t%s' % (datetime.datetime.strftime(datetime.datetime.now(), '%Y-%m-%d %H:%M:%S'), e))
